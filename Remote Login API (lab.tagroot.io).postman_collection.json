@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "b4ff2a6a-dee9-444a-adab-7ba3afa293f3",
+		"name": "Remote Login API (lab.tagroot.io)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11814059"
+	},
+	"item": [
+		{
+			"name": "Redirect to documentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiateDelayedLegalIdRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginToken\", pm.response.json().Token);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"LegalId\",\r\n\t\"Address\": \"{{UserLegalId}}\",\r\n\t\"ResponseMethod\": \"DelayedResponse\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiateDelayedJidRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginToken\", pm.response.json().Token);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"Jid\",\r\n\t\"Address\": \"{{UserJid}}\",\r\n\t\"ResponseMethod\": \"DelayedResponse\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiatePollLegalIdRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginPetitionId\", pm.response.json().PetitionId);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"LegalId\",\r\n\t\"Address\": \"{{UserLegalId}}\",\r\n\t\"ResponseMethod\": \"Poll\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiatePollJidRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginPetitionId\", pm.response.json().PetitionId);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"Jid\",\r\n\t\"Address\": \"{{UserJid}}\",\r\n\t\"ResponseMethod\": \"Poll\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiateCallbackLegalIdRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginPetitionId\", pm.response.json().PetitionId);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"LegalId\",\r\n\t\"Address\": \"{{UserLegalId}}\",\r\n\t\"ResponseMethod\": \"Callback\",\r\n    \"CallbackURL\": \"https://webhook.site/fb8ed445-ed84-4028-bc37-468ce87564dc\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiateCallbackJidRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginPetitionId\", pm.response.json().PetitionId);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"Jid\",\r\n\t\"Address\": \"{{UserJid}}\",\r\n\t\"ResponseMethod\": \"Callback\",\r\n    \"CallbackURL\": \"https://webhook.site/fb8ed445-ed84-4028-bc37-468ce87564dc\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiateWsLegalIdRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginPetitionId\", pm.response.json().PetitionId);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"LegalId\",\r\n\t\"Address\": \"{{UserLegalId}}\",\r\n\t\"ResponseMethod\": \"WebSocketEvent\",\r\n    \"TabID\": \"{{RemoteLoginTabID}}\",\r\n    \"Function\": \"Popup.Alert\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InitiateWsJidRequest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginPetitionId\", pm.response.json().PetitionId);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"AddressType\": \"Jid\",\r\n\t\"Address\": \"{{UserJid}}\",\r\n\t\"ResponseMethod\": \"WebSocketEvent\",\r\n    \"TabID\": \"{{RemoteLoginTabID}}\",\r\n    \"Function\": \"Popup.Alert\",\r\n\t\"Seconds\": 3600,\r\n\t\"Purpose\": \"Testing via Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PollPetition",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"PetitionId\": \"{{RemoteLoginPetitionId}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidateToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Token\": \"{{RemoteLoginToken}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"RemoteLoginToken\", pm.response.json().Token);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Token\": \"{{RemoteLoginToken}}\",\r\n    \"Seconds\": 3600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lab.tagroot.io/RemoteLogin",
+					"protocol": "https",
+					"host": [
+						"lab",
+						"tagroot",
+						"io"
+					],
+					"path": [
+						"RemoteLogin"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{LabRemoteLoginUserPassword}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "RemoteLoginUser",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "LabRemoteLoginUserPassword",
+			"value": ""
+		},
+		{
+			"key": "UserJid",
+			"value": ""
+		},
+		{
+			"key": "UserLegalId",
+			"value": ""
+		},
+		{
+			"key": "RemoteLoginToken",
+			"value": ""
+		},
+		{
+			"key": "RemoteLoginPetitionId",
+			"value": ""
+		},
+		{
+			"key": "RemoteLoginTabID",
+			"value": ""
+		}
+	]
+}
